@@ -12,18 +12,15 @@
 
 <manifest>
 
-<!-- We assume this manifest is in the same path as all the libraries. If you are
-     copying this manifest as a template then you probably want the fetch path
-     for this to be '../seL4' instead of '.' -->
-<remote name="seL4"
-fetch="."
-/>
+<!-- Set up the repos and fault fetch options -->
+<remote name="seL4" fetch="git://github.com/seL4/" />
+<remote name="hendersa" fetch="git://github.com/hendersa/" />
+<default revision="master" remote="seL4" sync-j="4" />
 
-<default revision="master"
-remote="seL4"
-/>
-
+<!-- The seL4 microkernel -->
 <project name="seL4.git" path="kernel"/>
+
+<!-- Tools and userspace libs -->
 <project name="common-tool.git" path="tools/common"/>
 <project name="kbuild-tool.git" path="tools/kbuild"/>
 <project name="elfloader-tool.git" path="tools/elfloader"/>
@@ -42,6 +39,8 @@ remote="seL4"
 <project name="libsel4simple-stable.git" path="libs/libsel4simple-stable"/>
 <project name="libplatsupport.git" path="libs/libplatsupport"/>
 <project name="libutils.git" path="libs/libutils"/>
+
+<!-- Our "app" -->
 <project name="sel4test.git" path="projects/sel4test">
     <linkfile src="Makefile" dest="Makefile"/>
     <linkfile src="Kbuild" dest="Kbuild"/>
@@ -52,3 +51,4 @@ remote="seL4"
 </project>
 
 </manifest>
+
