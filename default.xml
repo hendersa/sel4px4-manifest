@@ -41,7 +41,7 @@
 <project name="libutils.git" path="libs/libutils"/>
 
 <!-- Our "app" -->
-<project name="sel4px4.git" path="projects/px4">
+<project name="sel4px4.git" path="projects/px4" remote="hendersa">
     <linkfile src="Makefile" dest="Makefile"/>
     <linkfile src="Kbuild" dest="Kbuild"/>
     <linkfile src="Kconfig" dest="Kconfig"/>
