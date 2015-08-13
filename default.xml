@@ -21,7 +21,7 @@
 <project name="seL4.git" path="kernel"/>
 
 <!-- Tools and userspace libs -->
-<project name="common-tool.git" path="tools/common"/>
+<!-- <project name="common-tool.git" path="tools/common"/> -->
 <project name="kbuild-tool.git" path="tools/kbuild"/>
 <project name="elfloader-tool.git" path="tools/elfloader"/>
 <project name="musllibc.git" path="libs/libmuslc" revision="sel4"/>
@@ -39,6 +39,9 @@
 <project name="libsel4simple-stable.git" path="libs/libsel4simple-stable"/>
 <project name="libplatsupport.git" path="libs/libplatsupport"/>
 <project name="libutils.git" path="libs/libutils"/>
+
+<!-- Our modifications -->
+<project name="px4-common-tool.git" path="tools/common" remote="hendersa"/>
 
 <!-- Our "app" -->
 <project name="sel4px4.git" path="projects/px4" remote="hendersa">
