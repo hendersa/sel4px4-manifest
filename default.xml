@@ -40,7 +40,7 @@
 <project name="libutils.git" path="libs/libutils"/>
 
 <!-- Our modifications -->
-<project name="musllibc.git" path="libs/libmuslc" revision="sel4"/ remote="hendersa"/>
+<project name="musllibc.git" path="libs/libmuslc" revision="sel4" remote="hendersa"/>
 <project name="sel4px4-uclibcpp.git" path="libs/libuclibc++" remote="hendersa"/>
 <project name="px4-common-tool.git" path="tools/common" remote="hendersa"/>
 
